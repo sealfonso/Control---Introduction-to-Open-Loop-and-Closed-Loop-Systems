@@ -1,0 +1,50 @@
+close all
+A=1;
+a=0.1;
+g=9.81;
+A_1=1;
+A_2=1;
+a_1=0.1;
+a_2=0.1;
+gamma = 0.6;
+% Kp=1;
+% Ki=0.5;
+Ts=0.001;
+%%
+t=0:Ts:100;
+subplot(2,1,1)
+plot(t,h_1);
+hold on
+plot(t,h_1_m1)
+hold on
+plot(t,h_1_m2)
+hold off
+title('u=2 [m^3/s]')
+ylabel('h1 [m]')
+legend('h_1','Modelo 1 h1','Modelo 2 h1')
+subplot(2,1,2)
+plot(t,h_2)
+hold on
+plot(t,h_2_m1)
+hold on
+plot(t,h_2_m2)
+ylabel('h2 [m]')
+xlabel('t [s]')
+legend('h_2','Modelo 1 h2','Modelo 2 h2')
+
+% figure(1)
+% yyaxis left
+% plot(h_1.time, [h_1.signals(1).values])
+% hold on
+% plot(h_2.time, [h_2.signals(1).values])
+% yyaxis right
+% plot(u.time, [u.signals(1).values])
+% 
+
+% % figure(2)
+% yyaxis left
+% plot(h_1.time, [h_1.signals(1).values])
+% hold on
+% plot(h_2.time, [h_2.signals(1).values])
+% yyaxis right
+% plot(u.time, [u.signals(1).values])
