@@ -1,0 +1,28 @@
+close all
+A=1;
+a=0.1;
+g=9.81;
+A_1=1;
+A_2=1;
+a_1=0.2;
+a_2=0.1;
+gamma = 0.6;
+Kp=1;
+Ki=0.5;
+%%
+figure(1)
+yyaxis left
+plot(h_1.time, [h_1.signals(1).values])
+hold on
+plot(h_2.time, [h_2.signals(1).values])
+yyaxis right
+plot(u.time, [u.signals(1).values])
+
+
+figure(2)
+yyaxis left
+plot(h_1.time, [h_1.signals(1).values])
+hold on
+plot(h_2.time, [h_2.signals(1).values])
+yyaxis right
+plot(u.time, [u.signals(1).values])
